@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+google-generativeai
+langchain-community
+langchain-huggingface
+faiss-cpu
+rank_bm25
+sentence-transformers
+python-dotenv

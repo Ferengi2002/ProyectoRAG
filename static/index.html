@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Legal - Banco Pichincha</title>
+    <!-- Incluir fuente moderna Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar lateral (opcional para un diseño más como ChatGPT/Bancario Desktop) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Banca Legal</h2>
+            </div>
+            <div class="sidebar-content">
+                <button class="new-chat-btn">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Nuevo Chat
+                </button>
+                <div class="history-list">
+                    <p class="history-title">Conversaciones Recientes</p>
+                    <div class="history-item active">Normativa de Créditos</div>
+                    <!-- Items de historial futuros se pueden agregar aquí -->
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <p>Auditor de RAG Híbrido</p>
+            </div>
+        </aside>
+
+        <!-- Contenedor Principal de Chat -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <div class="header-branding">
+                    <h1>Asistente Normativo</h1>
+                    <span class="badge">Legal RAG</span>
+                </div>
+            </header>
+
+            <div class="chat-scroll-area" id="chatList">
+                <!-- Mensaje inicial de bienvenida -->
+                <div class="message-wrapper bot">
+                    <div class="avatar bot-avatar">BP</div>
+                    <div class="message-content">
+                        <p>Hola, soy tu asistente legal virtual basado en las normativas del banco. ¿En qué puedo ayudarte hoy sobre nuestras políticas y normas institucionales?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <form id="chatForm">
+                    <div class="input-wrapper">
+                        <textarea id="questionInput" placeholder="Pregunta sobre la normativa bancaria..." rows="1"></textarea>
+                        <button type="submit" id="sendBtn" title="Enviar mensaje">
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </div>
+                    <div class="disclaimer">
+                        Las respuestas están generadas automatizadamente a partir de documentos internos analizados.
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Incluir Marked.js para formatear Markdown en el Frontend, muy útil con Gemini -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

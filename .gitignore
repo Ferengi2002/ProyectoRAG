@@ -1,0 +1,32 @@
+# Ambientes virtuales generados
+venv/
+app_env/
+.venv/
+env/
+ENV/
+
+# Archivos de entorno y de configuración privada (MUY IMPORTANTE)
+.env
+.env.local
+.env.*.local
+*.secret
+
+# Cachés de optimización interna de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Basura de Windows / Mac
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos temporales de scripts (logs)
+*.log
+
+# Entornos y metadatos de IDES (VSCode, PyCharm)
+.vscode/
+.idea/
